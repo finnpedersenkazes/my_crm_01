@@ -20,17 +20,17 @@ class PlaceEventRelationsController < ApplicationController
   def create
     @place_event_relation = PlaceEventRelation.new(place_event_relation_params)
     if @place_event_relation.save
-redirect_to place_event_relations_path
+      redirect_to place_event_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @place_event_relation.update(place_event_relation_params)
-redirect_to place_event_relations_path
+      redirect_to place_event_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

@@ -18,17 +18,17 @@ class PlacesController < ApplicationController
   def create
     @place = Place.new(place_params)
     if @place.save
-redirect_to places_path
+      redirect_to places_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @place.update(place_params)
-redirect_to places_path
+      redirect_to places_path
     else
-render :edit
+      render :edit
     end
   end
 

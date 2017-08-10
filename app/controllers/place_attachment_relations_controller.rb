@@ -20,17 +20,17 @@ class PlaceAttachmentRelationsController < ApplicationController
   def create
     @place_attachment_relation = PlaceAttachmentRelation.new(place_attachment_relation_params)
     if @place_attachment_relation.save
-redirect_to place_attachment_relations_path
+      redirect_to place_attachment_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @place_attachment_relation.update(place_attachment_relation_params)
-redirect_to place_attachment_relations_path
+      redirect_to place_attachment_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

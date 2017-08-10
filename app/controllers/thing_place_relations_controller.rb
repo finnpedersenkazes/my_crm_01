@@ -20,17 +20,17 @@ class ThingPlaceRelationsController < ApplicationController
   def create
     @thing_place_relation = ThingPlaceRelation.new(thing_place_relation_params)
     if @thing_place_relation.save
-redirect_to thing_place_relations_path
+      redirect_to thing_place_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @thing_place_relation.update(thing_place_relation_params)
-redirect_to thing_place_relations_path
+      redirect_to thing_place_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

@@ -18,17 +18,17 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-redirect_to events_path
+      redirect_to events_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @event.update(event_params)
-redirect_to events_path
+      redirect_to events_path
     else
-render :edit
+      render :edit
     end
   end
 

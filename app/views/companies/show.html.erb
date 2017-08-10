@@ -21,23 +21,23 @@
 <table class="table table-bordered"'>
   <thead>
     <tr>
-<th>Person</th>
-<th>Start Date</th>
-<th>End Date</th>
-<th>Job Function</th>
-<th>Active</th>
+      <th>Person</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Job Function</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @company.company_person_relations.each do |company_person_relation| %>
-<tr>
-  <td><%= link_to company_person_relation.person.name, company_person_relation.person %></td>
-  <td><%= link_to company_person_relation.start_date, company_person_relation %></td>
-  <td><%= company_person_relation.end_date %></td>
-  <td><%= company_person_relation.job_function %></td>
-  <td><%= company_person_relation.active %></td>
-</tr>
+      <tr>
+        <td><%= link_to company_person_relation.person.name, company_person_relation.person %></td>
+        <td><%= link_to company_person_relation.start_date, company_person_relation %></td>
+        <td><%= company_person_relation.end_date %></td>
+        <td><%= company_person_relation.job_function %></td>
+        <td><%= company_person_relation.active %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -46,21 +46,21 @@
 <table class="table table-bordered"'>
   <thead>
     <tr>
-<th>Thing</th>
-<th>Acquired Date</th>
-<th>Disposed Date</th>
-<th>Active</th>
+      <th>Thing</th>
+      <th>Acquired Date</th>
+      <th>Disposed Date</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @company.company_thing_relations.each do |company_thing_relation| %>
-<tr>
-  <td><%= link_to company_thing_relation.thing.name, company_thing_relation.thing %></td>
-  <td><%= link_to company_thing_relation.acquired_date, company_thing_relation %></td>
-  <td><%= company_thing_relation.disposed_date %></td>
-  <td><%= company_thing_relation.active %></td>
-</tr>
+      <tr>
+        <td><%= link_to company_thing_relation.thing.name, company_thing_relation.thing %></td>
+        <td><%= link_to company_thing_relation.acquired_date, company_thing_relation %></td>
+        <td><%= company_thing_relation.disposed_date %></td>
+        <td><%= company_thing_relation.active %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -69,17 +69,17 @@
 <table class="table table-bordered"'>
   <thead>
     <tr>
-<th>Place</th>
-<th>Active</th>
+      <th>Place</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @company.company_place_relations.each do |company_place_relation| %>
-<tr>
-  <td><%= link_to company_place_relation.place.name, company_place_relation.place %></td>
-  <td><%= link_to company_place_relation.active, company_place_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to company_place_relation.place.name, company_place_relation.place %></td>
+        <td><%= link_to company_place_relation.active, company_place_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -88,17 +88,17 @@
 <table class="table table-bordered"'>
   <thead>
     <tr>
-<th>Event</th>
-<th>Active</th>
+      <th>Event</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @company.company_event_relations.each do |company_event_relation| %>
-<tr>
-  <td><%= link_to company_event_relation.event.name, company_event_relation.event %></td>
-  <td><%= link_to company_event_relation.active, company_event_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to company_event_relation.event.name, company_event_relation.event %></td>
+        <td><%= link_to company_event_relation.active, company_event_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -107,17 +107,17 @@
 <table class="table table-bordered"'>
   <thead>
     <tr>
-<th>Attachment</th>
-<th>Active</th>
+      <th>Attachment</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @company.company_attachment_relations.each do |company_attachment_relation| %>
-<tr>
-  <td><%= link_to company_attachment_relation.attachment.name, company_attachment_relation.attachment %></td>
-  <td><%= link_to company_attachment_relation.active, company_attachment_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to company_attachment_relation.attachment.name, company_attachment_relation.attachment %></td>
+        <td><%= link_to company_attachment_relation.active, company_attachment_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>

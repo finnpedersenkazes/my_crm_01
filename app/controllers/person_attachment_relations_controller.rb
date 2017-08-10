@@ -20,17 +20,17 @@ class PersonAttachmentRelationsController < ApplicationController
   def create
     @person_attachment_relation = PersonAttachmentRelation.new(person_attachment_relation_params)
     if @person_attachment_relation.save
-redirect_to person_attachment_relations_path
+      redirect_to person_attachment_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @person_attachment_relation.update(person_attachment_relation_params)
-redirect_to person_attachment_relations_path
+      redirect_to person_attachment_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

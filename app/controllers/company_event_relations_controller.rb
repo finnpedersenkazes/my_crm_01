@@ -20,17 +20,17 @@ class CompanyEventRelationsController < ApplicationController
   def create
     @company_event_relation = CompanyEventRelation.new(company_event_relation_params)
     if @company_event_relation.save
-redirect_to company_event_relations_path
+      redirect_to company_event_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @company_event_relation.update(company_event_relation_params)
-redirect_to company_event_relations_path
+      redirect_to company_event_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

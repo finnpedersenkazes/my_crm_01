@@ -20,17 +20,17 @@ class CompanyAttachmentRelationsController < ApplicationController
   def create
     @company_attachment_relation = CompanyAttachmentRelation.new(company_attachment_relation_params)
     if @company_attachment_relation.save
-redirect_to company_attachment_relations_path
+      redirect_to company_attachment_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @company_attachment_relation.update(company_attachment_relation_params)
-redirect_to company_attachment_relations_path
+      redirect_to company_attachment_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

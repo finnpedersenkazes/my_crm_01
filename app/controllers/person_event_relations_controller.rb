@@ -20,17 +20,17 @@ class PersonEventRelationsController < ApplicationController
   def create
     @person_event_relation = PersonEventRelation.new(person_event_relation_params)
     if @person_event_relation.save
-redirect_to person_event_relations_path
+      redirect_to person_event_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @person_event_relation.update(person_event_relation_params)
-redirect_to person_event_relations_path
+      redirect_to person_event_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

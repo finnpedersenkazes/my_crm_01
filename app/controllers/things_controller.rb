@@ -18,17 +18,17 @@ class ThingsController < ApplicationController
   def create
     @thing = Thing.new(thing_params)
     if @thing.save
-redirect_to things_path
+      redirect_to things_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @thing.update(thing_params)
-redirect_to things_path
+      redirect_to things_path
     else
-render :edit
+      render :edit
     end
   end
 

@@ -20,17 +20,17 @@ class ThingEventRelationsController < ApplicationController
   def create
     @thing_event_relation = ThingEventRelation.new(thing_event_relation_params)
     if @thing_event_relation.save
-redirect_to thing_event_relations_path
+      redirect_to thing_event_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @thing_event_relation.update(thing_event_relation_params)
-redirect_to thing_event_relations_path
+      redirect_to thing_event_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

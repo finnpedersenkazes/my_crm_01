@@ -18,17 +18,17 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
-redirect_to companies_path
+      redirect_to companies_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @company.update(company_params)
-redirect_to companies_path
+      redirect_to companies_path
     else
-render :edit
+      render :edit
     end
   end
 

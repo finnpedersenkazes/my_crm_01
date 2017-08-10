@@ -20,17 +20,17 @@ class ThingAttachmentRelationsController < ApplicationController
   def create
     @thing_attachment_relation = ThingAttachmentRelation.new(thing_attachment_relation_params)
     if @thing_attachment_relation.save
-redirect_to thing_attachment_relations_path
+      redirect_to thing_attachment_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @thing_attachment_relation.update(thing_attachment_relation_params)
-redirect_to thing_attachment_relations_path
+      redirect_to thing_attachment_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

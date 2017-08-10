@@ -18,17 +18,17 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(person_params)
     if @person.save
-redirect_to people_path
+      redirect_to people_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @person.update(person_params)
-redirect_to people_path
+      redirect_to people_path
     else
-render :edit
+      render :edit
     end
   end
 

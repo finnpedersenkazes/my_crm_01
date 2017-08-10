@@ -18,17 +18,17 @@ class AttachmentsController < ApplicationController
   def create
     @attachment = Attachment.new(attachment_params)
     if @attachment.save
-redirect_to attachments_path
+      redirect_to attachments_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @attachment.update(attachment_params)
-redirect_to attachments_path
+      redirect_to attachments_path
     else
-render :edit
+      render :edit
     end
   end
 

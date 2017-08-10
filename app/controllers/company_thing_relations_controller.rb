@@ -20,17 +20,17 @@ class CompanyThingRelationsController < ApplicationController
   def create
     @company_thing_relation = CompanyThingRelation.new(company_thing_relation_params)
     if @company_thing_relation.save
-redirect_to company_thing_relations_path
+      redirect_to company_thing_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @company_thing_relation.update(company_thing_relation_params)
-redirect_to company_thing_relations_path
+      redirect_to company_thing_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

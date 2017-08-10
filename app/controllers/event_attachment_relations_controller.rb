@@ -20,17 +20,17 @@ class EventAttachmentRelationsController < ApplicationController
   def create
     @event_attachment_relation = EventAttachmentRelation.new(event_attachment_relation_params)
     if @event_attachment_relation.save
-redirect_to event_attachment_relations_path
+      redirect_to event_attachment_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @event_attachment_relation.update(event_attachment_relation_params)
-redirect_to event_attachment_relations_path
+      redirect_to event_attachment_relations_path
     else
-render :edit
+      render :edit
     end
   end
 

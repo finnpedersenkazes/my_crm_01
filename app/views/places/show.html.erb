@@ -33,17 +33,17 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-<th>Company</th>
-<th>Active</th>
+      <th>Company</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @place.company_place_relations.each do |company_place_relation| %>
-<tr>
-  <td><%= link_to company_place_relation.company.name, company_place_relation.company %></td>
-  <td><%= link_to company_place_relation.active, company_place_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to company_place_relation.company.name, company_place_relation.company %></td>
+        <td><%= link_to company_place_relation.active, company_place_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -52,17 +52,17 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-<th>Person</th>
-<th>Active</th>
+      <th>Person</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @place.person_place_relations.each do |person_place_relation| %>
-<tr>
-  <td><%= link_to person_place_relation.person.name, person_place_relation.person %></td>
-  <td><%= link_to person_place_relation.active, person_place_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to person_place_relation.person.name, person_place_relation.person %></td>
+        <td><%= link_to person_place_relation.active, person_place_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -71,17 +71,17 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-<th>Thing</th>
-<th>Active</th>
+      <th>Thing</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @place.thing_place_relations.each do |thing_place_relation| %>
-<tr>
-  <td><%= link_to thing_place_relation.thing.name, thing_place_relation.thing %></td>
-  <td><%= link_to thing_place_relation.active, thing_place_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to thing_place_relation.thing.name, thing_place_relation.thing %></td>
+        <td><%= link_to thing_place_relation.active, thing_place_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -90,17 +90,17 @@
 <table class="table table-bordered"'>
   <thead>
     <tr>
-<th>Event</th>
-<th>Active</th>
+      <th>Event</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @place.place_event_relations.each do |place_event_relation| %>
-<tr>
-  <td><%= link_to place_event_relation.event.name, place_event_relation.event %></td>
-  <td><%= link_to place_event_relation.active, place_event_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to place_event_relation.event.name, place_event_relation.event %></td>
+        <td><%= link_to place_event_relation.active, place_event_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
@@ -109,17 +109,17 @@
 <table class="table table-bordered"'>
   <thead>
     <tr>
-<th>Attachment</th>
-<th>Active</th>
+      <th>Attachment</th>
+      <th>Active</th>
     </tr>
   </thead>
 
   <tbody>
     <% @place.place_attachment_relations.each do |place_attachment_relation| %>
-<tr>
-  <td><%= link_to place_attachment_relation.attachment.name, place_attachment_relation.attachment %></td>
-  <td><%= link_to place_attachment_relation.active, place_attachment_relation %></td>
-</tr>
+      <tr>
+        <td><%= link_to place_attachment_relation.attachment.name, place_attachment_relation.attachment %></td>
+        <td><%= link_to place_attachment_relation.active, place_attachment_relation %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>

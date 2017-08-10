@@ -20,17 +20,17 @@ class PersonThingRelationsController < ApplicationController
   def create
     @person_thing_relation = PersonThingRelation.new(person_thing_relation_params)
     if @person_thing_relation.save
-redirect_to person_thing_relations_path
+      redirect_to person_thing_relations_path
     else
-render :new
+      render :new
     end
   end
 
   def update
     if @person_thing_relation.update(person_thing_relation_params)
-redirect_to person_thing_relations_path
+      redirect_to person_thing_relations_path
     else
-render :edit
+      render :edit
     end
   end
 
