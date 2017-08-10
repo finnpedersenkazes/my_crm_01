@@ -7,6 +7,27 @@ Company.create!([
   {name: "SpaceX", description: "Sends stuff into space", active: "Yes"},
   {name: "Le Wagon", description: "Change your life: learn to code", active: "Yes"}
 ])
+Event.create!([
+  {name: "Le Wagon Lisbon  Summer 2017", description: "Lear to code with Ruby on Rails and deploy it on Heroku", active: "During July and August"}
+])
+Person.create!([
+  {name: "Bill Gates", description: "", active: ""},
+  {name: "Steve Jobs", description: "", active: ""},
+  {name: "Finn Pedersen", description: "", active: ""},
+  {name: "Elon Musk", description: "", active: ""}
+])
+Place.create!([
+  {name: "Beta-i", description: "Home of Le Wagon Lisbon", address: "Av. Casal Ribeiro 28, 1000-092 Lisboa, Portugal", lattitude: "38.732435", longitude: "-9.142385", altitude: "200 m"},
+  {name: "Company address", description: "", address: "21 bis rue passe Demoiselles, Reims, France", lattitude: "", longitude: "", altitude: ""}
+])
+Thing.create!([
+  {name: "Microsoft Windows", description: "", active: ""},
+  {name: "iPad", description: "", active: ""},
+  {name: "iPhone", description: "", active: ""},
+  {name: "Tesla Model S", description: "", active: ""},
+  {name: "Tesla Model X", description: "", active: ""},
+  {name: "Tesla Model 3", description: "", active: ""}
+])
 CompanyEventRelation.create!([
   {active: "", company_id: 7, event_id: 1}
 ])
@@ -25,15 +46,6 @@ CompanyThingRelation.create!([
   {acquired_date: "", disposed_date: "", active: "", company_id: 2, thing_id: 2},
   {acquired_date: "", disposed_date: "", active: "", company_id: 2, thing_id: 3}
 ])
-Event.create!([
-  {name: "Le Wagon Lisbon  Summer 2017", description: "Lear to code with Ruby on Rails and deploy it on Heroku", active: "During July and August"}
-])
-Person.create!([
-  {name: "Bill Gates", description: "", active: ""},
-  {name: "Steve Jobs", description: "", active: ""},
-  {name: "Finn Pedersen", description: "", active: ""},
-  {name: "Elon Musk", description: "", active: ""}
-])
 PersonEventRelation.create!([
   {active: "", person_id: 3, event_id: 1}
 ])
@@ -46,18 +58,6 @@ PersonThingRelation.create!([
   {active: "Model 6", person_id: 3, thing_id: 3},
   {active: "I would really like one", person_id: 3, thing_id: 6}
 ])
-Place.create!([
-  {name: "Beta-i", description: "Home of Le Wagon Lisbon", address: "Av. Casal Ribeiro 28, 1000-092 Lisboa, Portugal", lattitude: "38.732435", longitude: "-9.142385", altitude: "200 m"},
-  {name: "Company address", description: "", address: "21 bis rue passe Demoiselles, Reims, France", lattitude: "", longitude: "", altitude: ""}
-])
 PlaceEventRelation.create!([
   {active: "", place_id: 1, event_id: 1}
-])
-Thing.create!([
-  {name: "Microsoft Windows", description: "", active: ""},
-  {name: "iPad", description: "", active: ""},
-  {name: "iPhone", description: "", active: ""},
-  {name: "Tesla Model S", description: "", active: ""},
-  {name: "Tesla Model X", description: "", active: ""},
-  {name: "Tesla Model 3", description: "", active: ""}
 ])
