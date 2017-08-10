@@ -1,0 +1,9 @@
+<h1 class="text-center">New Company Place Relation</h1>
+<%= simple_form_for(@company_place_relation) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :company %>
+  <%= f.association :place %>
+  <%= f.input :active, placeholder:"Active", label: false %>
+  <%= f.button :submit, "Add Company Place Relation", class: "btn btn-primary" %>
+  <%= link_to "Company Place Relations", company_place_relations_path, class: "btn btn-primary"  %>
+<% end %>

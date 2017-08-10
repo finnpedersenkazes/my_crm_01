@@ -1,0 +1,10 @@
+<h1 class="text-center">Update Company Attachment Relation</h1>
+<%= simple_form_for(@company_attachment_relation) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :company %>
+  <%= f.association :attachment %>
+  <%= f.input :active, placeholder:"Active", label: "Active" %>
+  <%= f.button :submit, "Update Company Attachment Relation", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-warning" %>
+  <%= link_to "Company Attachment Relations", company_attachment_relations_path, class: "btn btn-primary"  %>
+<% end %>

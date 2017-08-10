@@ -1,0 +1,9 @@
+<h1 class="text-center">New Event Attachment Relation</h1>
+<%= simple_form_for(@event_attachment_relation) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :event %>
+  <%= f.association :attachment %>
+  <%= f.input :active, placeholder:"Active", label: false %>
+  <%= f.button :submit, "Add Event Attachment Relation", class: "btn btn-primary" %>
+  <%= link_to "Event Attachment Relations", event_attachment_relations_path, class: "btn btn-primary"  %>
+<% end %>

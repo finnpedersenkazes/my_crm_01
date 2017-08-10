@@ -1,0 +1,37 @@
+<h1 class="text-center">Places</h1>
+<p>
+  <%= link_to "Home Page", root_path, class: "btn btn-primary" %>
+  <%= link_to "Add Place", new_place_path, class: "btn btn-primary" %>
+</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Lattitude</th>
+      <th>Longitude</th>
+      <th>Altitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @places.each do |place| %>
+      <tr>
+        <td><%= link_to place.name, place_path(place) %></td>
+        <td><%= place.description %></td>
+        <td><%= place.address %></td>
+        <td><%= place.lattitude %></td>
+        <td><%= place.longitude %></td>
+        <td><%= place.altitude %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to "Companies", companies_path, class: "btn btn-primary"  %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+  <%= link_to "Things", things_path, class: "btn btn-primary"  %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+</p>

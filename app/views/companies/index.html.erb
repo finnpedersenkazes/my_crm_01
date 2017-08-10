@@ -1,0 +1,31 @@
+<h1 class="text-center">Companies</h1>
+<p>
+  <%= link_to "Home Page", root_path, class: "btn btn-primary" %>
+  <%= link_to "Add Company", new_company_path, class: "btn btn-primary" %>
+</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= link_to company.name, company_path(company) %></td>
+        <td><%= company.description %></td>
+        <td><%= company.active %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to "Companies", companies_path, class: "btn btn-primary"  %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+  <%= link_to "Things", things_path, class: "btn btn-primary"  %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+</p>

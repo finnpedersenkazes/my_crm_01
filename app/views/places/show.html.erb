@@ -1,0 +1,125 @@
+<h1 class="text-center">Place</h1>
+<p>
+  <strong>Name: </strong>
+  <%= @place.name %>
+</p>
+<p>
+  <strong>Description: </strong>
+  <%= @place.description %>
+</p>
+<p>
+  <strong>Address: </strong>
+  <%= @place.address %>
+</p>
+<p>
+  <strong>Lattitude: </strong>
+  <%= @place.lattitude %>
+</p>
+<p>
+  <strong>Longitude: </strong>
+  <%= @place.longitude %>
+</p>
+<p>
+  <strong>Altitude: </strong>
+  <%= @place.altitude %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_place_path(@place), class: "btn btn-warning " %>
+  <%= link_to "Delete", place_path(@place), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+</p>
+<h2 class="text-center">Company Place Relations</h2>
+<%= link_to 'Add Company Place Relation', new_company_place_relation_path(place_id: @place.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Company</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place.company_place_relations.each do |company_place_relation| %>
+<tr>
+  <td><%= link_to company_place_relation.company.name, company_place_relation.company %></td>
+  <td><%= link_to company_place_relation.active, company_place_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Person Place Relations</h2>
+<%= link_to 'Add Person Place Relation', new_person_place_relation_path(place_id: @place.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Person</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place.person_place_relations.each do |person_place_relation| %>
+<tr>
+  <td><%= link_to person_place_relation.person.name, person_place_relation.person %></td>
+  <td><%= link_to person_place_relation.active, person_place_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Thing Place Relations</h2>
+<%= link_to 'Add Thing Place Relation', new_thing_place_relation_path(place_id: @place.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Thing</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place.thing_place_relations.each do |thing_place_relation| %>
+<tr>
+  <td><%= link_to thing_place_relation.thing.name, thing_place_relation.thing %></td>
+  <td><%= link_to thing_place_relation.active, thing_place_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Place Event Relations</h2>
+<%= link_to 'Add Place Event Relation', new_place_event_relation_path(place_id: @place.id), class: "btn btn-primary" %>
+<table class="table table-bordered"'>
+  <thead>
+    <tr>
+<th>Event</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place.place_event_relations.each do |place_event_relation| %>
+<tr>
+  <td><%= link_to place_event_relation.event.name, place_event_relation.event %></td>
+  <td><%= link_to place_event_relation.active, place_event_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Place Attachment Relations</h2>
+<%= link_to 'Add Place Attachment Relation', new_place_attachment_relation_path(place_id: @place.id), class: "btn btn-primary" %>
+<table class="table table-bordered"'>
+  <thead>
+    <tr>
+<th>Attachment</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place.place_attachment_relations.each do |place_attachment_relation| %>
+<tr>
+  <td><%= link_to place_attachment_relation.attachment.name, place_attachment_relation.attachment %></td>
+  <td><%= link_to place_attachment_relation.active, place_attachment_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,9 @@
+<h1 class="text-center">New Place Event Relation</h1>
+<%= simple_form_for(@place_event_relation) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :place %>
+  <%= f.association :event %>
+  <%= f.input :active, placeholder:"Active", label: false %>
+  <%= f.button :submit, "Add Place Event Relation", class: "btn btn-primary" %>
+  <%= link_to "Place Event Relations", place_event_relations_path, class: "btn btn-primary"  %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1 class="text-center">Update Person</h1>
+<%= simple_form_for(@person) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: "Name" %>
+  <%= f.input :description, placeholder:"Description", label: "Description" %>
+  <%= f.input :active, placeholder:"Active", label: "Active" %>
+  <%= f.button :submit, "Update Person", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-warning" %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+<% end %>

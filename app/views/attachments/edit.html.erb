@@ -1,0 +1,10 @@
+<h1 class="text-center">Update Attachment</h1>
+<%= simple_form_for(@attachment) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: "Name" %>
+  <%= f.input :description, placeholder:"Description", label: "Description" %>
+  <%= f.input :active, placeholder:"Active", label: "Active" %>
+  <%= f.button :submit, "Update Attachment", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-warning" %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+<% end %>

@@ -1,0 +1,18 @@
+<h1 class="text-center">Event Attachment Relation</h1>
+<p>
+  <strong>Event: </strong>
+  <%= link_to @event_attachment_relation.event.name, @event_attachment_relation.event %>
+</p>
+<p>
+  <strong>Attachment: </strong>
+  <%= link_to @event_attachment_relation.attachment.name, @event_attachment_relation.attachment %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @event_attachment_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_event_attachment_relation_path(@event_attachment_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", event_attachment_relation_path(@event_attachment_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Event Attachment Relations", event_attachment_relations_path, class: "btn btn-primary"  %>
+</p>

@@ -1,0 +1,13 @@
+<h1 class="text-center">Update Company Person Relation</h1>
+<%= simple_form_for(@company_person_relation) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :company %>
+  <%= f.association :person %>
+  <%= f.input :start_date, placeholder:"Start Date", label: "Start Date" %>
+  <%= f.input :end_date, placeholder:"End Date", label: "End Date" %>
+  <%= f.input :job_function, placeholder:"Job Function", label: "Job Function" %>
+  <%= f.input :active, placeholder:"Active", label: "Active" %>
+  <%= f.button :submit, "Update Company Person Relation", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-warning" %>
+  <%= link_to "Company Person Relations", company_person_relations_path, class: "btn btn-primary"  %>
+<% end %>

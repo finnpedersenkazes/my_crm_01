@@ -1,0 +1,10 @@
+<h1 class="text-center">Update Person Place Relation</h1>
+<%= simple_form_for(@person_place_relation) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :person %>
+  <%= f.association :place %>
+  <%= f.input :active, placeholder:"Active", label: "Active" %>
+  <%= f.button :submit, "Update Person Place Relation", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-warning" %>
+  <%= link_to "Person Place Relations", person_place_relations_path, class: "btn btn-primary"  %>
+<% end %>

@@ -1,0 +1,119 @@
+<h1 class="text-center">Person</h1>
+<p>
+  <strong>Name: </strong>
+  <%= @person.name %>
+</p>
+<p>
+  <strong>Description: </strong>
+  <%= @person.description %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @person.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_person_path(@person), class: "btn btn-warning " %>
+  <%= link_to "Delete", person_path(@person), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+</p>
+<h2 class="text-center">Company Person Relations</h2>
+<%= link_to 'Add Company Person Relation', new_company_person_relation_path(person_id: @person.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Company</th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Job Function</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person.company_person_relations.each do |company_person_relation| %>
+<tr>
+  <td><%= link_to company_person_relation.company.name, company_person_relation.company %></td>
+  <td><%= link_to company_person_relation.start_date, company_person_relation %></td>
+  <td><%= company_person_relation.end_date %></td>
+  <td><%= company_person_relation.job_function %></td>
+  <td><%= company_person_relation.active %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Person Thing Relations</h2>
+<%= link_to 'Add Person Thing Relation', new_person_thing_relation_path(person_id: @person.id), class: "btn btn-primary" %>
+<table class="table table-bordered"'>
+  <thead>
+    <tr>
+<th>Thing</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person.person_thing_relations.each do |person_thing_relation| %>
+<tr>
+  <td><%= link_to person_thing_relation.thing.name, person_thing_relation.thing %></td>
+  <td><%= link_to person_thing_relation.active, person_thing_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Person Place Relations</h2>
+<%= link_to 'Add Person Place Relation', new_person_place_relation_path(person_id: @person.id), class: "btn btn-primary" %>
+<table class="table table-bordered"'>
+  <thead>
+    <tr>
+<th>Place</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person.person_place_relations.each do |person_place_relation| %>
+<tr>
+  <td><%= link_to person_place_relation.place.name, person_place_relation.place %></td>
+  <td><%= link_to person_place_relation.active, person_place_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Person Event Relations</h2>
+<%= link_to 'Add Person Event Relation', new_person_event_relation_path(person_id: @person.id), class: "btn btn-primary" %>
+<table class="table table-bordered"'>
+  <thead>
+    <tr>
+<th>Event</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person.person_event_relations.each do |person_event_relation| %>
+<tr>
+  <td><%= link_to person_event_relation.event.name, person_event_relation.event %></td>
+  <td><%= link_to person_event_relation.active, person_event_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Person Attachment Relations</h2>
+<%= link_to 'Add Person Attachment Relation', new_person_attachment_relation_path(person_id: @person.id), class: "btn btn-primary" %>
+<table class="table table-bordered"'>
+  <thead>
+    <tr>
+<th>Attachment</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @person.person_attachment_relations.each do |person_attachment_relation| %>
+<tr>
+  <td><%= link_to person_attachment_relation.attachment.name, person_attachment_relation.attachment %></td>
+  <td><%= link_to person_attachment_relation.active, person_attachment_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>

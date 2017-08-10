@@ -1,0 +1,31 @@
+<h1 class="text-center">People</h1>
+<p>
+  <%= link_to "Home Page", root_path, class: "btn btn-primary" %>
+  <%= link_to "Add Person", new_person_path, class: "btn btn-primary" %>
+</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= link_to person.name, person_path(person) %></td>
+        <td><%= person.description %></td>
+        <td><%= person.active %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to "Companies", companies_path, class: "btn btn-primary"  %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+  <%= link_to "Things", things_path, class: "btn btn-primary"  %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+</p>

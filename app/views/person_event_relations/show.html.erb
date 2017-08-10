@@ -1,0 +1,18 @@
+<h1 class="text-center">Person Event Relation</h1>
+<p>
+  <strong>Person: </strong>
+  <%= link_to @person_event_relation.person.name, @person_event_relation.person %>
+</p>
+<p>
+  <strong>Event: </strong>
+  <%= link_to @person_event_relation.event.name, @person_event_relation.event %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @person_event_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_person_event_relation_path(@person_event_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", person_event_relation_path(@person_event_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Person Event Relations", person_event_relations_path, class: "btn btn-primary"  %>
+</p>

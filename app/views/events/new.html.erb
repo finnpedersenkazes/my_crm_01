@@ -1,0 +1,9 @@
+<h1 class="text-center">New Event</h1>
+<%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: false %>
+  <%= f.input :description, placeholder:"Description", label: false %>
+  <%= f.input :active, placeholder:"Active", label: false %>
+  <%= f.button :submit, "Add Event", class: "btn btn-primary" %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+<% end %>

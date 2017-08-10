@@ -1,0 +1,9 @@
+<h1 class="text-center">New Thing</h1>
+<%= simple_form_for(@thing) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: false %>
+  <%= f.input :description, placeholder:"Description", label: false %>
+  <%= f.input :active, placeholder:"Active", label: false %>
+  <%= f.button :submit, "Add Thing", class: "btn btn-primary" %>
+  <%= link_to "Things", things_path, class: "btn btn-primary"  %>
+<% end %>

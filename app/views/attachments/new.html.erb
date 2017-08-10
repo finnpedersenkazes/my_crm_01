@@ -1,0 +1,9 @@
+<h1 class="text-center">New Attachment</h1>
+<%= simple_form_for(@attachment) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: false %>
+  <%= f.input :description, placeholder:"Description", label: false %>
+  <%= f.input :active, placeholder:"Active", label: false %>
+  <%= f.button :submit, "Add Attachment", class: "btn btn-primary" %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+<% end %>

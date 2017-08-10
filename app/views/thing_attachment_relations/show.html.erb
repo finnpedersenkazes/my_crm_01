@@ -1,0 +1,18 @@
+<h1 class="text-center">Thing Attachment Relation</h1>
+<p>
+  <strong>Thing: </strong>
+  <%= link_to @thing_attachment_relation.thing.name, @thing_attachment_relation.thing %>
+</p>
+<p>
+  <strong>Attachment: </strong>
+  <%= link_to @thing_attachment_relation.attachment.name, @thing_attachment_relation.attachment %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @thing_attachment_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_thing_attachment_relation_path(@thing_attachment_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", thing_attachment_relation_path(@thing_attachment_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Thing Attachment Relations", thing_attachment_relations_path, class: "btn btn-primary"  %>
+</p>

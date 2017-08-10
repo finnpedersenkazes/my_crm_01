@@ -1,0 +1,12 @@
+<h1 class="text-center">New Place</h1>
+<%= simple_form_for(@place) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: false %>
+  <%= f.input :description, placeholder:"Description", label: false %>
+  <%= f.input :address, placeholder:"Address", label: false %>
+  <%= f.input :lattitude, placeholder:"Lattitude", label: false %>
+  <%= f.input :longitude, placeholder:"Longitude", label: false %>
+  <%= f.input :altitude, placeholder:"Altitude", label: false %>
+  <%= f.button :submit, "Add Place", class: "btn btn-primary" %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+<% end %>

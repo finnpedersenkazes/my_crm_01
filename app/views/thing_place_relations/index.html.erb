@@ -1,0 +1,31 @@
+<h1 class="text-center">Thing Place Relations</h1>
+<p>
+  <%= link_to "Home Page", root_path, class: "btn btn-primary" %>
+  <%= link_to "Add Thing Place Relation", new_thing_place_relation_path, class: "btn btn-primary" %>
+</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Thing</th>
+      <th>Place</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @thing_place_relations.each do |thing_place_relation| %>
+      <tr>
+        <td><%= link_to thing_place_relation.thing.name, thing_place_relation.thing %></td>
+        <td><%= link_to thing_place_relation.place.name, thing_place_relation.place %></td>
+        <td><%= link_to thing_place_relation.active, thing_place_relation_path(thing_place_relation) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to "Companies", companies_path, class: "btn btn-primary"  %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+  <%= link_to "Things", things_path, class: "btn btn-primary"  %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+</p>

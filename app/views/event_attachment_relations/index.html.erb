@@ -1,0 +1,31 @@
+<h1 class="text-center">Event Attachment Relations</h1>
+<p>
+  <%= link_to "Home Page", root_path, class: "btn btn-primary" %>
+  <%= link_to "Add Event Attachment Relation", new_event_attachment_relation_path, class: "btn btn-primary" %>
+</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Attachment</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @event_attachment_relations.each do |event_attachment_relation| %>
+      <tr>
+        <td><%= link_to event_attachment_relation.event.name, event_attachment_relation.event %></td>
+        <td><%= link_to event_attachment_relation.attachment.name, event_attachment_relation.attachment %></td>
+        <td><%= link_to event_attachment_relation.active, event_attachment_relation_path(event_attachment_relation) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to "Companies", companies_path, class: "btn btn-primary"  %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+  <%= link_to "Things", things_path, class: "btn btn-primary"  %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+</p>

@@ -1,0 +1,18 @@
+<h1 class="text-center">Company Attachment Relation</h1>
+<p>
+  <strong>Company: </strong>
+  <%= link_to @company_attachment_relation.company.name, @company_attachment_relation.company %>
+</p>
+<p>
+  <strong>Attachment: </strong>
+  <%= link_to @company_attachment_relation.attachment.name, @company_attachment_relation.attachment %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @company_attachment_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_company_attachment_relation_path(@company_attachment_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", company_attachment_relation_path(@company_attachment_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Company Attachment Relations", company_attachment_relations_path, class: "btn btn-primary"  %>
+</p>

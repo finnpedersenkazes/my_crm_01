@@ -1,0 +1,18 @@
+<h1 class="text-center">Thing Place Relation</h1>
+<p>
+  <strong>Thing: </strong>
+  <%= link_to @thing_place_relation.thing.name, @thing_place_relation.thing %>
+</p>
+<p>
+  <strong>Place: </strong>
+  <%= link_to @thing_place_relation.place.name, @thing_place_relation.place %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @thing_place_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_thing_place_relation_path(@thing_place_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", thing_place_relation_path(@thing_place_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Thing Place Relations", thing_place_relations_path, class: "btn btn-primary"  %>
+</p>

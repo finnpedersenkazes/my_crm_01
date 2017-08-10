@@ -1,0 +1,113 @@
+<h1 class="text-center">Event</h1>
+<p>
+  <strong>Name: </strong>
+  <%= @event.name %>
+</p>
+<p>
+  <strong>Description: </strong>
+  <%= @event.description %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @event.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_event_path(@event), class: "btn btn-warning " %>
+  <%= link_to "Delete", event_path(@event), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+</p>
+<h2 class="text-center">Company Event Relations</h2>
+<%= link_to 'Add Company Event Relation', new_company_event_relation_path(event_id: @event.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Company</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event.company_event_relations.each do |company_event_relation| %>
+<tr>
+  <td><%= link_to company_event_relation.company.name, company_event_relation.company %></td>
+  <td><%= link_to company_event_relation.active, company_event_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Person Event Relations</h2>
+<%= link_to 'Add Person Event Relation', new_person_event_relation_path(event_id: @event.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Person</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event.person_event_relations.each do |person_event_relation| %>
+<tr>
+  <td><%= link_to person_event_relation.person.name, person_event_relation.person %></td>
+  <td><%= link_to person_event_relation.active, person_event_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Thing Event Relations</h2>
+<%= link_to 'Add Thing Event Relation', new_thing_event_relation_path(event_id: @event.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Thing</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event.thing_event_relations.each do |thing_event_relation| %>
+<tr>
+  <td><%= link_to thing_event_relation.thing.name, thing_event_relation.thing %></td>
+  <td><%= link_to thing_event_relation.active, thing_event_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Place Event Relations</h2>
+<%= link_to 'Add Place Event Relation', new_place_event_relation_path(event_id: @event.id), class: "btn btn-primary" %>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Place</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event.place_event_relations.each do |place_event_relation| %>
+<tr>
+  <td><%= link_to place_event_relation.place.name, place_event_relation.place %></td>
+  <td><%= link_to place_event_relation.active, place_event_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>
+<h2 class="text-center">Event Attachment Relations</h2>
+<%= link_to 'Add Event Attachment Relation', new_event_attachment_relation_path(event_id: @event.id), class: "btn btn-primary" %>
+<table class="table table-bordered"'>
+  <thead>
+    <tr>
+<th>Attachment</th>
+<th>Active</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event.event_attachment_relations.each do |event_attachment_relation| %>
+<tr>
+  <td><%= link_to event_attachment_relation.attachment.name, event_attachment_relation.attachment %></td>
+  <td><%= link_to event_attachment_relation.active, event_attachment_relation %></td>
+</tr>
+    <% end %>
+  </tbody>
+</table>

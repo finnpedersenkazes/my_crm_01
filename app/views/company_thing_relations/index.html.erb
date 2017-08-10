@@ -1,0 +1,35 @@
+<h1 class="text-center">Company Thing Relations</h1>
+<p>
+  <%= link_to "Home Page", root_path, class: "btn btn-primary" %>
+  <%= link_to "Add Company Thing Relation", new_company_thing_relation_path, class: "btn btn-primary" %>
+</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Thing</th>
+      <th>Acquired Date</th>
+      <th>Disposed Date</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @company_thing_relations.each do |company_thing_relation| %>
+      <tr>
+        <td><%= link_to company_thing_relation.company.name, company_thing_relation.company %></td>
+        <td><%= link_to company_thing_relation.thing.name, company_thing_relation.thing %></td>
+        <td><%= link_to company_thing_relation.acquired_date, company_thing_relation_path(company_thing_relation) %></td>
+        <td><%= company_thing_relation.disposed_date %></td>
+        <td><%= company_thing_relation.active %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to "Companies", companies_path, class: "btn btn-primary"  %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+  <%= link_to "Things", things_path, class: "btn btn-primary"  %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+  <%= link_to "Events", events_path, class: "btn btn-primary"  %>
+  <%= link_to "Attachments", attachments_path, class: "btn btn-primary"  %>
+</p>

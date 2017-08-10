@@ -1,0 +1,18 @@
+<h1 class="text-center">Person Attachment Relation</h1>
+<p>
+  <strong>Person: </strong>
+  <%= link_to @person_attachment_relation.person.name, @person_attachment_relation.person %>
+</p>
+<p>
+  <strong>Attachment: </strong>
+  <%= link_to @person_attachment_relation.attachment.name, @person_attachment_relation.attachment %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @person_attachment_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_person_attachment_relation_path(@person_attachment_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", person_attachment_relation_path(@person_attachment_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Person Attachment Relations", person_attachment_relations_path, class: "btn btn-primary"  %>
+</p>

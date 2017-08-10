@@ -1,0 +1,30 @@
+<h1 class="text-center">Company Person Relation</h1>
+<p>
+  <strong>Company: </strong>
+  <%= link_to @company_person_relation.company.name, @company_person_relation.company %>
+</p>
+<p>
+  <strong>Person: </strong>
+  <%= link_to @company_person_relation.person.name, @company_person_relation.person %>
+</p>
+<p>
+  <strong>Start Date: </strong>
+  <%= @company_person_relation.start_date %>
+</p>
+<p>
+  <strong>End Date: </strong>
+  <%= @company_person_relation.end_date %>
+</p>
+<p>
+  <strong>Job Function: </strong>
+  <%= @company_person_relation.job_function %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @company_person_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_company_person_relation_path(@company_person_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", company_person_relation_path(@company_person_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Company Person Relations", company_person_relations_path, class: "btn btn-primary"  %>
+</p>

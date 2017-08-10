@@ -1,0 +1,18 @@
+<h1 class="text-center">Company Place Relation</h1>
+<p>
+  <strong>Company: </strong>
+  <%= link_to @company_place_relation.company.name, @company_place_relation.company %>
+</p>
+<p>
+  <strong>Place: </strong>
+  <%= link_to @company_place_relation.place.name, @company_place_relation.place %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @company_place_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_company_place_relation_path(@company_place_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", company_place_relation_path(@company_place_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Company Place Relations", company_place_relations_path, class: "btn btn-primary"  %>
+</p>

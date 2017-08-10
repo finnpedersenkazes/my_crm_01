@@ -1,0 +1,13 @@
+<h1 class="text-center">Update Place</h1>
+<%= simple_form_for(@place) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: "Name" %>
+  <%= f.input :description, placeholder:"Description", label: "Description" %>
+  <%= f.input :address, placeholder:"Address", label: "Address" %>
+  <%= f.input :lattitude, placeholder:"Lattitude", label: "Lattitude" %>
+  <%= f.input :longitude, placeholder:"Longitude", label: "Longitude" %>
+  <%= f.input :altitude, placeholder:"Altitude", label: "Altitude" %>
+  <%= f.button :submit, "Update Place", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-warning" %>
+  <%= link_to "Places", places_path, class: "btn btn-primary"  %>
+<% end %>

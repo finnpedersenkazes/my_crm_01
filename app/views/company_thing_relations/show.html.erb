@@ -1,0 +1,26 @@
+<h1 class="text-center">Company Thing Relation</h1>
+<p>
+  <strong>Company: </strong>
+  <%= link_to @company_thing_relation.company.name, @company_thing_relation.company %>
+</p>
+<p>
+  <strong>Thing: </strong>
+  <%= link_to @company_thing_relation.thing.name, @company_thing_relation.thing %>
+</p>
+<p>
+  <strong>Acquired Date: </strong>
+  <%= @company_thing_relation.acquired_date %>
+</p>
+<p>
+  <strong>Disposed Date: </strong>
+  <%= @company_thing_relation.disposed_date %>
+</p>
+<p>
+  <strong>Active: </strong>
+  <%= @company_thing_relation.active %>
+</p>
+<p class="text-center">
+  <%= link_to "Edit", edit_company_thing_relation_path(@company_thing_relation), class: "btn btn-warning " %>
+  <%= link_to "Delete", company_thing_relation_path(@company_thing_relation), method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Company Thing Relations", company_thing_relations_path, class: "btn btn-primary"  %>
+</p>

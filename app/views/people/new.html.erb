@@ -1,0 +1,9 @@
+<h1 class="text-center">New Person</h1>
+<%= simple_form_for(@person) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, placeholder:"Name", label: false %>
+  <%= f.input :description, placeholder:"Description", label: false %>
+  <%= f.input :active, placeholder:"Active", label: false %>
+  <%= f.button :submit, "Add Person", class: "btn btn-primary" %>
+  <%= link_to "People", people_path, class: "btn btn-primary"  %>
+<% end %>
